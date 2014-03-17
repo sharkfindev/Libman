@@ -27,8 +27,7 @@ public class Main {
         JFrame f = new JFrame();
         JPanel p = new JPanel();
         JTable EmployeeTable = new JTable();
-        TableColumn lastname = null;
-        EmployeeTable.addColumn(lastname);
+     
       JScrollPane employees = new JScrollPane(EmployeeTable);
     JButton clockinout = new JButton("Employee Clock In/Clock Out");
     JButton SwimToReef = new JButton("Reef");
