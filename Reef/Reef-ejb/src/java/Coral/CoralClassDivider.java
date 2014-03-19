@@ -5,7 +5,6 @@
  */
 
 package Coral;
-
 import javax.swing.JTable;
 
 /**
@@ -18,7 +17,9 @@ public class CoralClassDivider {
  }   
  //getters
  String[][][][][][]getbusinessinfo(){
+ 
      return null;
+     
      
  }
  String[][][][][][][][][][][][][][][][]getStudents(){
