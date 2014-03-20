@@ -172,149 +172,68 @@ public class Student implements Serializable {
 @Table(name="Items")
  public class Item implements Serializable {
 
-    private String StudentID;
-    private String LastName;
-    private String FirstName;
-    private String email;
-    private String PhoneNumber;
-    private String DaysAttending;
-    private String Comments;
-    private String ItemsCheckedCurrently;
-    private String ItemsChecked;
-    private String Messages;
-    private String Timeslot;
-    private String Vacation;
-    private String Sick;
-    private String Flagged;
-    private String Attended;
-    private String Absent;
+    private int ISBN;
+    private String itemtype;
+    private String name;
+    private String author;
+    private int copiesavailable;
+    private String itemhistory;
 
     public Item() { }
 
-    public Item(String StudentID, String LastName, String FirstName,String email,String PhoneNumber,String DaysAttending,String Comments,String ItemsCheckedCurrently,String ItemsChecked,String Timeslot,String Vacation,String Messages,String Sick,String Flagged,String Attended,String Absent) {
-        this.StudentID = StudentID;
-        this.LastName = LastName;
-        this.FirstName=FirstName;
-        this.PhoneNumber=PhoneNumber;
-        this.email=email;
-        this.Messages=Messages;
-        this.DaysAttending=DaysAttending;
-        this.Comments=Comments;
-        this.ItemsCheckedCurrently=ItemsCheckedCurrently;
-        this.ItemsChecked=ItemsChecked;
-        this.Timeslot=Timeslot;
-        this.Vacation=Vacation;
-        this.Sick=Sick;
-        this.Flagged=Flagged;
-        this.Attended=Attended;
-        this.Absent=Absent;
+    public Item(int ISBN, String itemtype, String name,String author,int copiesavailable,String itemhistory) {
+        this.ISBN = ISBN;
+        this.itemtype = itemtype;
+        this.name=name;
+        this.author=author;
+        this.copiesavailable=copiesavailable;
+        this.itemhistory=itemhistory;
   
     }
      @Id
-    public String getStudentID() {
-        return this.StudentID;
+    public int getISBN() {
+        return this.ISBN;
     }
 
-    public String getLastName() {
-        return this.LastName;
+    public String getitemtype() {
+        return this.itemtype;
     }
-      public String getFirstName() {
-        return this.FirstName;
-    }
-
-    public String getPhoneNumber() {
-        return this.PhoneNumber;
-    }
-      public String getemail() {
-        return this.email;
+      public String getname() {
+        return this.name;
     }
 
-    public String getMessages() {
-        return this.Messages;
+    public String getauthor() {
+        return this.author;
     }
-      public String getDaysAttending() {
-        return this.DaysAttending;
-    }
-
-    public String getComments() {
-        return this.Comments;
-    }
-      public String getItemsCheckedCurrently() {
-        return this.ItemsCheckedCurrently;
+      public int getcopiesavailable() {
+        return this.copiesavailable;
     }
 
-    public String getItemsChecked() {
-        return this.ItemsChecked;
+    public String getitemhistory() {
+        return this.itemhistory;
     }
-      public String getVacation() {
-        return this.Vacation;
-    }
-
-    public String getSick() {
-        return this.Sick;
-    }
-      public String getFlagged() {
-        return this.Flagged;
-    }
-
-    public String getAttended() {
-        return this.Attended;
-    }
-    public String getAbsent() {
-        return this.Absent;
-    }
-     public void  setStudentID(String ID) {
-   this.StudentID = ID;
+     public void  setISBN(int code) {
+   this.ISBN = code;
      }
 
-    public void setLastName(String last) {
-        this.LastName=last;
+    public void setitemtype(String type) {
+        this.itemtype=type;
     }
-      public void setFirstName(String first) {
-        this.FirstName=first;
+      public void setname(String itemname) {
+        this.name=itemname;
     }
 
-    public void setPhoneNumber(String phno) {
-        this.PhoneNumber=phno;
+    public void setauthor(String creator) {
+        this.author=creator;
     }
-      public void setemail(String mail) {
-        this.email=mail;
+      public void setcopiesavailable(int copies) {
+        this.copiesavailable=copies;
       }
 
-    public void setMessages(String mssg) {
-        this.Messages=mssg;
+    public void setitemhistory(String hist) {
+        this.itemhistory=hist;
     }
-      public void setDaysAttending(String days) {
-     this.DaysAttending=days;
-    }
-
-    public void setComments(String cmmt) {
-         this.Comments=cmmt;
-    }
-      public void setItemsCheckedCurrently(String CurrentItems) {
-         this.ItemsCheckedCurrently=CurrentItems;
-    }
-
-    public void setItemsChecked(String checked) {
-         this.ItemsChecked=checked;
-    }
-      public void setVacation(String vac) {
-         this.Vacation=vac;
-    }
-
-    public void setSick(String sickstatus) {
-         this.Sick=sickstatus;
-    }
-      public void setFlagged(String Flaggedstatus) {
-         this.Flagged=Flaggedstatus;
-    }
-
-    public void setAttended(String present) {
-         this.Attended=present;
-    }
-    public void setAbsent(String notpresent) {
-        this.Absent=notpresent;
-    }
+     
     
  }
   @Entity
