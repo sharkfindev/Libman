@@ -243,13 +243,13 @@ public class Student implements Serializable {
     private String centernum;
     private String businessname;
     private String owner;
-    private String employeelist;
+    private String[][][][][] employeelist;
     private String daysoperating;
     private String times;
 
     public General() { }
 
-    public General(String centernum, String businessname, String owner,String employeelist,String daysoperating,String times) {
+    public General(String centernum, String businessname, String owner,String[][][][][] employeelist,String daysoperating,String times) {
         this.centernum = centernum;
         this.businessname = businessname;
         this.owner=owner;
@@ -269,7 +269,7 @@ public class Student implements Serializable {
         return this.owner;
     }
 
-    public String getemployeelist() {
+    public String[][][][][] getemployeelist() {
         return this.employeelist;
     }
       public String getdaysoperating() {
@@ -291,7 +291,7 @@ public class Student implements Serializable {
         this.owner=boss;
     }
 
-    public void setemployeelist(String employees) {
+    public void setemployeelist(String[][][][][] employees) {
         this.employeelist=employees;
     }
       public void setdaysoperating(String days) {
