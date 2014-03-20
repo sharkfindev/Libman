@@ -115,6 +115,58 @@ public class Student implements Serializable {
     public String getAbsent() {
         return this.Absent;
     }
+     public void  setStudentID(String ID) {
+   this.StudentID = ID;
+     }
+
+    public void setLastName(String last) {
+        this.LastName=last;
+    }
+      public void setFirstName(String first) {
+        this.FirstName=first;
+    }
+
+    public void setPhoneNumber(String phno) {
+        this.PhoneNumber=phno;
+    }
+      public void setemail(String mail) {
+        this.email=mail;
+      }
+
+    public void setMessages(String mssg) {
+        this.Messages=mssg;
+    }
+      public void setDaysAttending(String days) {
+     this.DaysAttending=days;
+    }
+
+    public void setComments(String cmmt) {
+         this.Comments=cmmt;
+    }
+      public void setItemsCheckedCurrently(String CurrentItems) {
+         this.ItemsCheckedCurrently=CurrentItems;
+    }
+
+    public void setItemsChecked(String checked) {
+         this.ItemsChecked=checked;
+    }
+      public void setVacation(String vac) {
+         this.Vacation=vac;
+    }
+
+    public void setSick(String sickstatus) {
+         this.Sick=sickstatus;
+    }
+      public void setFlagged(String Flaggedstatus) {
+         this.Flagged=Flaggedstatus;
+    }
+
+    public void setAttended(String present) {
+         this.Attended=present;
+    }
+    public void setAbsent(String notpresent) {
+        this.Absent=notpresent;
+    }
     
  }
 }
