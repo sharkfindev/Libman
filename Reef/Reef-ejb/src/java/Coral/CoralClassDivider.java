@@ -20,8 +20,7 @@ public class CoralClassDivider {
  }   
  //getters
  @Entity
-@Table(name="Student")
-
+@Table(name="Students")
 public class Student implements Serializable {
 
     private String StudentID;
@@ -169,6 +168,8 @@ public class Student implements Serializable {
     }
     
  }
+  @Entity
+@Table(name="Items")
  public class Item implements Serializable {
 
     private String StudentID;
@@ -316,6 +317,8 @@ public class Student implements Serializable {
     }
     
  }
+  @Entity
+@Table(name="GeneralInfo")
  public class General implements Serializable {
 
     private String centernum;
@@ -336,58 +339,28 @@ public class Student implements Serializable {
         this.times=times;
     }
      @Id
-    public String getStudentID() {
-        return this.StudentID;
+    public String getcenternum() {
+        return this.centernum;
     }
 
-    public String getLastName() {
-        return this.LastName;
+    public String getbusinessname() {
+        return this.businessname;
     }
-      public String getFirstName() {
-        return this.FirstName;
-    }
-
-    public String getPhoneNumber() {
-        return this.PhoneNumber;
-    }
-      public String getemail() {
-        return this.email;
+      public String getowner() {
+        return this.owner;
     }
 
-    public String getMessages() {
-        return this.Messages;
+    public String getemployeelist() {
+        return this.employeelist;
     }
-      public String getDaysAttending() {
-        return this.DaysAttending;
-    }
-
-    public String getComments() {
-        return this.Comments;
-    }
-      public String getItemsCheckedCurrently() {
-        return this.ItemsCheckedCurrently;
+      public String getdaysoperating() {
+        return this.daysoperating;
     }
 
-    public String getItemsChecked() {
-        return this.ItemsChecked;
+    public String gettimes() {
+        return this.times;
     }
-      public String getVacation() {
-        return this.Vacation;
-    }
-
-    public String getSick() {
-        return this.Sick;
-    }
-      public String getFlagged() {
-        return this.Flagged;
-    }
-
-    public String getAttended() {
-        return this.Attended;
-    }
-    public String getAbsent() {
-        return this.Absent;
-    }
+     
      public void  setStudentID(String ID) {
    this.StudentID = ID;
      }
