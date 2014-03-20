@@ -9,6 +9,8 @@ package Minnow;
 import Coral.CoralClassDivider.Item;
 import Coral.CoralClassDivider.Student;
 import java.awt.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.ejb.*;
 import javax.persistence.*;
 import javax.transaction.NotSupportedException;
@@ -27,6 +29,28 @@ public List getStudents() throws StudentsNotFoundException {
         throw new StudentsNotFoundException("Could not get student: "
              + ex.getMessage());
     }
+}
+public List StudentSignIn(boolean In) throws StudentsNotFoundException {
+       
+   boolean alreadysignedin=false;
+   
+        return (List) em.createQuery(
+            "SELECT bd FROM Students bd ORDER BY bd.StudentID").
+                getResultList();
+        if(){
+                throw new StudentsNotFoundException("Could sign Student In: ");
+    
+           In= false;
+        }
+        else{
+            
+        }
+    
+    
+    
+   
+        
+    
 }
 public Student getStudents(String StudentID) throws StudentsNotFoundException {
     Student requestedStudent = em.find(Student.class, StudentID);
@@ -69,5 +93,7 @@ public Item getItem(String ISBN) throws ItemNotFoundException {
         private ItemNotFoundException(String string) {
         }
     }
+
+
    
     }
