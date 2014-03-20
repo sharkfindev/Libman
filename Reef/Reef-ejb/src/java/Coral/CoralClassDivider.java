@@ -361,58 +361,28 @@ public class Student implements Serializable {
         return this.times;
     }
      
-     public void  setStudentID(String ID) {
-   this.StudentID = ID;
+     public void  setcenternum(String centerno) {
+   this.centernum = centerno;
      }
 
-    public void setLastName(String last) {
-        this.LastName=last;
+    public void setbusinessname(String entityname) {
+        this.businessname=entityname;
     }
-      public void setFirstName(String first) {
-        this.FirstName=first;
+      public void setowner(String boss) {
+        this.owner=boss;
     }
 
-    public void setPhoneNumber(String phno) {
-        this.PhoneNumber=phno;
+    public void setemployeelist(String employees) {
+        this.employeelist=employees;
     }
-      public void setemail(String mail) {
-        this.email=mail;
+      public void setdaysoperating(String days) {
+        this.daysoperating=days;
       }
 
-    public void setMessages(String mssg) {
-        this.Messages=mssg;
+    public void settimes(String open) {
+        this.times=open;
     }
-      public void setDaysAttending(String days) {
-     this.DaysAttending=days;
-    }
-
-    public void setComments(String cmmt) {
-         this.Comments=cmmt;
-    }
-      public void setItemsCheckedCurrently(String CurrentItems) {
-         this.ItemsCheckedCurrently=CurrentItems;
-    }
-
-    public void setItemsChecked(String checked) {
-         this.ItemsChecked=checked;
-    }
-      public void setVacation(String vac) {
-         this.Vacation=vac;
-    }
-
-    public void setSick(String sickstatus) {
-         this.Sick=sickstatus;
-    }
-      public void setFlagged(String Flaggedstatus) {
-         this.Flagged=Flaggedstatus;
-    }
-
-    public void setAttended(String present) {
-         this.Attended=present;
-    }
-    public void setAbsent(String notpresent) {
-        this.Absent=notpresent;
-    }
+    
     
  }
  
