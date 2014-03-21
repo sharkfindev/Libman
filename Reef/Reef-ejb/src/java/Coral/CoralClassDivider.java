@@ -5,6 +5,7 @@
  */
 
 package Coral;
+import java.io.File;
 import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -39,10 +40,11 @@ public class Student implements Serializable {
     private String Flagged;
     private String Attended;
     private String Absent;
+    private File SetCSV;
 
     public Student() { }
 
-    public Student(String StudentID, String LastName, String FirstName,String email,String PhoneNumber,String DaysAttending,String Comments,String ItemsCheckedCurrently,String ItemsChecked,String Timeslot,String Vacation,String Messages,String Sick,String Flagged,String Attended,String Absent) {
+    public Student(String StudentID,File setCSV, String LastName, String FirstName,String email,String PhoneNumber,String DaysAttending,String Comments,String ItemsCheckedCurrently,String ItemsChecked,String Timeslot,String Vacation,String Messages,String Sick,String Flagged,String Attended,String Absent) {
         this.StudentID = StudentID;
         this.LastName = LastName;
         this.FirstName=FirstName;
@@ -59,6 +61,7 @@ public class Student implements Serializable {
         this.Flagged=Flagged;
         this.Attended=Attended;
         this.Absent=Absent;
+        this.SetCSV=SetCSV;
   
     }
      @Id
@@ -124,6 +127,9 @@ public class Student implements Serializable {
       public void setFirstName(String first) {
         this.FirstName=first;
     }
+      public void setCSV(File CSV){
+          this.SetCSV=CSV;
+      }
 
     public void setPhoneNumber(String phno) {
         this.PhoneNumber=phno;
@@ -178,10 +184,11 @@ public class Student implements Serializable {
     private String author;
     private int copiesavailable;
     private String itemhistory;
+    private File SetCSV;
 
     public Item() { }
 
-    public Item(int ISBN, String itemtype, String name,String author,int copiesavailable,String itemhistory) {
+    public Item(int ISBN, String itemtype,File SetCSV, String name,String author,int copiesavailable,String itemhistory) {
         this.ISBN = ISBN;
         this.itemtype = itemtype;
         this.name=name;
@@ -219,6 +226,10 @@ public class Student implements Serializable {
     public void setitemtype(String type) {
         this.itemtype=type;
     }
+     public void setCSV(File CSV){
+          this.SetCSV=CSV;
+      }
+
       public void setname(String itemname) {
         this.name=itemname;
     }
