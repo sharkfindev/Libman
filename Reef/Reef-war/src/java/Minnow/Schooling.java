@@ -44,9 +44,7 @@ public List StudentSignIn(boolean In) throws StudentsNotFoundException {
        
         }
         else{
-            AlertBox signedin =("Student is signed in.");
-            
-        }
+       }
         return null;
 }
     public List StudentSignOut(boolean In) throws StudentsNotFoundException {
@@ -62,9 +60,8 @@ public List StudentSignIn(boolean In) throws StudentsNotFoundException {
        
         }
         else{
-            AlertBox signedout =("Student is signed out.");
-            
-        }
+       }
+        return null;
         
     }
     /**
@@ -79,6 +76,12 @@ em.createQuery("INSERT studenttable FROM "+StudentImportCSVFile+"WITH(FIELDTERMI
         File ItemImportCSVFile = null;
 em.createQuery("INSERT itemtable FROM "+ItemImportCSVFile+"WITH(FIELDTERMINATOR = ',',ROWTERMINATOR = '\n')").getResultList();
     }
+       public void StudentCheckoutItem() throws nocopiesavailable{
+           
+       }
+        public void StudentCheckinItem() throws itemnotcheckedout{
+           
+       }
    
    
         
@@ -128,7 +131,19 @@ public Item getItem(String ISBN) throws ItemNotFoundException {
 
     private static class filenotfound extends Exception {
 
-        public filenotfound() {
+        public filenotfound(String filenotfound) {
+        }
+    }
+
+    private static class nocopiesavailable extends Exception {
+
+        public nocopiesavailable() {
+        }
+    }
+
+    private static class itemnotcheckedout extends Exception {
+
+        public itemnotcheckedout() {
         }
     }
 
